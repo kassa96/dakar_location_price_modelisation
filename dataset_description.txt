@@ -1,0 +1,115 @@
+DATASET : Annonces de location résidentielle à Dakar, Sénégal
+=============================================================
+
+TITRE
+-----
+Dakar Residential Rental Listings — 1 507 annonces, 24 quartiers
+
+
+DESCRIPTION
+-----------
+Ce dataset regroupe 1 507 annonces de location d'appartements résidentiels
+publiées sur une plateforme immobilière en ligne ciblant le marché dakarois
+(Sénégal). Les données ont été collectées par scraping entre janvier 2024 et
+juin 2025, puis nettoyées et normalisées.
+
+Il s'agit du premier dataset public dédié au marché locatif résidentiel de
+Dakar. Il peut servir à la prédiction de prix, à l'analyse hédonique, ou à
+l'exploration du marché immobilier en Afrique de l'Ouest.
+ce dataset doit être utilisé a des fins pédagogique et de recherche et non à des fins commercials.
+
+CONTEXTE
+--------
+Le marché locatif dakarois est caractérisé par une forte asymétrie
+d'information : les prix sont fixés de manière informelle et aucun registre
+public n'existe. Ce dataset constitue une base de travail pour développer
+des outils de référence de prix à destination des locataires et propriétaires.
+
+FICHIER
+-------
+dataset.csv — 1 507 lignes × 33 colonnes
+
+
+DESCRIPTION DES COLONNES
+-------------------------
+
+Colonnes textuelles
+  title           Titre de l'annonce
+  description     Description complète rédigée par l'annonceur
+  posted_at       Date de publication de l'annonce
+
+Cible
+  price           Loyer mensuel demandé (FCFA). 
+
+Localisation et type
+  location        Quartier de Dakar (24 valeurs canoniques)
+                  Almadies, Ouakam, Mermoz, Point-E, Fann, Plateau,
+                  Sacré-Cœur, Ngor, Liberté, Foire, Corniche, Grand Yoff,
+                  Hann, Médina, Ouest Fann, Dakar Plateau, Yoff, Parcelles,
+                  Sicap, Khar Yalla, Mamelles, Cambérène, Pikine, Diamniadio
+  type_appartement Type normalisé : F2, F3, F4, F5, F6, Studio
+
+Caractéristiques structurelles
+  nbre_chambre        Nombre de chambres
+  nbre_salle_de_bain  Nombre de salles de bain 
+  surface             Surface en m² 
+  etage               Étage (0 = rez-de-chaussée)
+
+Équipements (booléens : True / False)
+  ascenseur           Ascenseur dans l'immeuble
+  piscine             Piscine
+  parking             Parking
+  groupe_electrogene  Groupe électrogène
+  gardiennage         Gardiennage / sécurité
+  salle_sport         Salle de sport
+  vue_mer             Vue sur la mer
+  standing            Classé haut standing
+  climatisation       Climatisation
+  cuisine_equipee     Cuisine équipée
+  dressing            Dressing
+  balcon              Balcon
+  terrasse            Terrasse
+  buanderie           Buanderie
+  espace_familial     Espace familial / salon séparé
+  toilette_visiteur   Toilette visiteur
+  chauffe_eau         Chauffe-eau
+  placard             Placards intégrés
+  neuf                Bien neuf ou en VEFA
+  meuble              Appartement meublé
+  duplex              Duplex
+  penthouse           Penthouse
+  garage              Garage
+
+
+LIMITATIONS
+-----------
+- Les prix sont des prix demandés (asking prices), pas des prix de transaction.
+  Le loyer effectivement signé peut être inférieur selon la
+  négociation.
+- Le corpus couvre uniquement les annonces publiées en ligne ; le marché
+  locatif informel n'est pas représenté.
+- Les dates (posted_at) sont relatives à la date de collecte et ne peuvent
+  pas être converties en dates absolues sans métadonnées supplémentaires.
+- Le dataset est spécifique à Dakar et ne se généralise pas sans adaptation.
+
+
+LICENCE
+-------
+CC BY 4.0 — libre d'utilisation avec attribution.
+Source : plateforme d'annonces immobilières en ligne (Dakar, Sénégal).
+Collecte à des fins de recherche académique.
+
+
+AUTEUR
+------
+Amadou Tidiane Diallo
+Dakar, Sénégal
+kassadiallo@gmail.com
+Juin 2026
+
+
+CITATION
+--------
+Si vous utilisez ce dataset dans vos travaux, merci de citer :
+
+  Diallo, A. T. (2026). Collecte de données sur les loyers Résidentiels à Dakar . Dakar, Sénégal.
